@@ -1,0 +1,29 @@
+#toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 40px; /* slightly bigger for spacing */
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+#toggle img {
+  font-size: 18px;
+  color: black;
+}
+
+#toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}

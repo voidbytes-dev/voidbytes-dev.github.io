@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(/FONTS/Comfortaa.ttf);
+}
+
+body {
+  background-color: #FFFAF0;
+  color: black;
+  font-family: Comfortaa, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+  height: 100vh;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  margin-bottom: 0.5em;
+}
+
+/* Text elements */
+p, li, span, div {
+  color: rgb(0, 0, 32);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: #00ffc8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  background: white;
+  color: rgb(0, 0, 32);
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffc8;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #00ffc8;
+  color: white;
+}

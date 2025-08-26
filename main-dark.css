@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(/FONTS/Comfortaa.ttf);
+}
+
+body {
+  background-color: rgb(0, 0, 32);
+  color: white;
+  font-family: Comfortaa, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+  height: 100vh;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #00ffc8;
+  margin-bottom: 0.5em;
+}
+
+/* Text elements */
+p, li, span, div {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: #00ffc8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffc8;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #00ffc8;
+  color: rgb(0, 0, 32);
+}
+
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+#loader p {
+  color: #00ffc8;
+  font-family: Comfortaa;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #00ffc8;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

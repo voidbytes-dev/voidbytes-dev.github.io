@@ -1,0 +1,126 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(/FONTS/Comfortaa.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Comfortaa;
+  overflow-x: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #161b22; /* Deep navy */
+  transition: all 0.5s ease;
+  z-index: 999;
+  box-shadow: 3px 0 10px rgba(0, 255, 200, 0.1);
+}
+
+.sidebar header {
+  font-size: 20px;
+  color: #00ffc8; /* Neon accent */
+  line-height: 70px;
+  text-align: center;
+  background: #161b22;
+  user-select: none;
+  text-shadow: 0 0 6px #00ffc8;
+}
+
+/* Nav links */
+.sidebar ul a {
+  display: block;
+  width: 100%;
+  line-height: 65px;
+  font-size: 15px;
+  color: #f0f0f0;
+  padding-left: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: padding-left 0.4s, background 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.sidebar ul li:hover a {
+  padding-left: 50px;
+  background: rgba(0, 255, 200, 0.1);
+  color: #00ffc8;
+}
+
+/* Nav icons */
+.sidebar ul a .nav-icon,
+.sidebar ul a img {
+  margin-right: 16px;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+/* Hide the checkbox */
+#check {
+  display: none;
+}
+
+/* Toggle button container */
+label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Hamburger + cross icon styles */
+label #btn,
+label #cancel {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #161b22;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px;
+  object-fit: contain;
+}
+
+label #btn {
+  left: 10px;
+  top: 10px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  left: -195px;
+  top: 17px;
+  z-index: 1111;
+  transition: all 0.5s ease;
+}
+
+/* Sidebar open */
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+/* Hide hamburger when sidebar is open */
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show cross icon */
+#check:checked ~ label #cancel {
+  left: 10px;
+}
